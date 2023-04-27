@@ -12,9 +12,19 @@
     <h1>JP's Color Scheme</h1>
   </header>
   <main>
-    <div class="main-container">
-      <div class="top">test</div>
-      <div class="middle">test2</div>
+    <div class="main-container" id="main-container">
+      <div class="top" id="top">
+        <!-- <label for="color-picker">Select your favorite color:</label> -->
+        <input type="color" id="color-picker" name="color-picker" value="#ff0000">
+        <!-- <label for="color-scheme">Choose a scheme</label> -->
+        <select name="color-scheme" id="color-scheme">
+          <option value="green">Green</option>
+          <option value="blue">Blue</option>
+        </select>
+        <button class="color-btn" id="color-btn">Get Color</button>
+      </div>
+      <div class="middle" id="middle">test2</div>
+      <div class="bottom" id="bottom">test3</div>
     </div>
   </main>
   <script src="index.js" type="module"></script>
