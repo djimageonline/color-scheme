@@ -1,0 +1,29 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: darkslategrey;
+}
+
+h1 {
+  text-align: center;
+  background-color: antiquewhite;
+  padding: 1em;
+}
+
+.main-container {
+  background-color: aliceblue;
+  width: 550px;
+  height: 550px;
+  margin: 0 auto;
+
+}
+
+.top {
+  background-color: chartreuse;
+  height: 90px;
+}
+
+.middle {
+  margin: 0;
+  background-color: coral;
+}
