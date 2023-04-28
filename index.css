@@ -78,8 +78,6 @@ form {
 }
 
 @media (max-width: 630px) {
-
-
   h1,
   .main-container {
     width: 350px; 
@@ -102,7 +100,7 @@ form {
 
   .middle {
     flex-direction: column;
-    width: 250px;
+    width: 150px;
     height: 100px;
   }
 
