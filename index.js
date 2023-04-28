@@ -3,6 +3,7 @@ const hexBottom = document.getElementById("hex-bottom");
 const colorScheme = document.getElementById("color-scheme");
 const colorPicker = document.getElementById("color-picker");
 const submitBtn = document.getElementById("submit");
+const clickedImg = document.getElementById("clicked-img");
 let message = document.getElementById("message");
 
 let colorScemeValue = ``;
@@ -11,14 +12,16 @@ let colorHexValue = ``;
 submitBtn.addEventListener("submit", handleSubmit);
 
 document.addEventListener("click", function (e) {
-  message.style.display = "initial";
-  let dataElement = e.target.src;
-  dataElement = `#${dataElement.slice(-6)}`;
-  navigator.clipboard.writeText(dataElement);
-  message.innerHTML = "-- Copied --";
-  setTimeout(function () {
-    message.innerHTML = "Click To Copy";
-  }, 1000);
+  if (e.target.src) {
+    message.style.display = "initial";
+    let dataElement = e.target.src;
+    dataElement = `#${dataElement.slice(-6)}`;
+    navigator.clipboard.writeText(dataElement);
+    message.innerHTML = "-- Copied --";
+    setTimeout(function () {
+      message.innerHTML = "Click To Copy";
+    }, 1000);
+  }
 });
 
 function initialRender() {
@@ -27,7 +30,7 @@ function initialRender() {
     .then((data) => {
       data.colors.forEach((color) => {
         middle.innerHTML += `
-        <img class="color-image" src="${color.image.bare}">`;
+        <img class="color-image" id="clicked-img" src="${color.image.bare}">`;
         hexBottom.innerHTML += `
         <p class="color-hex">${color.hex.value}</p>`;
       });
