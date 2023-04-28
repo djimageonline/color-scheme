@@ -62,7 +62,6 @@ form {
 /* Middle Color Images */
 
 .middle {
-  /* position: relative; */
   margin: 0;
   display: flex;
   width: 100%;
@@ -104,15 +103,13 @@ form {
 
   .contain {
     display: flex;
+    justify-content: center;
   }
 
   .middle {
     flex-direction: column;
-    /* position: absolute;
-    top: 200px;
-    left: 70px; */
-    width: 250px;
-    height: 100px;
+    width: 100px;
+
   }
 
   .color-image {
@@ -120,11 +117,7 @@ form {
   }
 
   .hex-bottom {
-    /* position: absolute; */
     flex-direction: column;
-    /* bottom: 20px;
-    left: 70px; */
-    text-shadow: 2px 2px 4px #000000;
   }
 
   .color-hex {
